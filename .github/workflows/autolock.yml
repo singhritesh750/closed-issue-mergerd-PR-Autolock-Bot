@@ -1,6 +1,8 @@
-name: 'Auto lock Bot '
+name: 'new Threads on close '
 
 on:
+  # issue_comment:
+  #   types: closed
   schedule:
     - cron: '*/10 * * * *'
   workflow_dispatch:
@@ -18,7 +20,7 @@ jobs:
     steps:
       - uses: dessant/lock-threads@v3
         with:
-#           deployDate: $(Get-Date -Format "YYYYMMDDThhmmssZ")
+          deployDate: $(Get-Date -Format "YYYYMMDDThhmmssZ")
           github-token: ${{ github.token }}
           issue-inactive-days: '0'
           exclude-issue-created-before: ''
@@ -50,5 +52,3 @@ jobs:
 #           remove-pr-labels: ''
 #           pr-comment: ''
 #           pr-lock-reason: 'resolved'
-          
-
