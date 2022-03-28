@@ -27,7 +27,7 @@ jobs:
           exclude-issue-created-after: ''
           exclude-issue-created-between: ''
           exclude-issue-closed-before: '2022-03-27T00:00:00Z'
-          exclude-issue-closed-after: '2022-03-28T15:00:00Z'
+          exclude-issue-closed-after: '2022-03-29T15:00:00Z'
           exclude-issue-closed-between: ''
           include-any-issue-labels: ''
           include-all-issue-labels: ''
