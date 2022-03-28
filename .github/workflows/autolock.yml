@@ -1,4 +1,4 @@
-name: 'new Threads on close '
+name: 'auto lock Bot '
 
 on:
   # issue_comment:
