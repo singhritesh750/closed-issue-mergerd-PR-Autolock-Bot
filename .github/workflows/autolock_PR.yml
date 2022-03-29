@@ -27,7 +27,7 @@ jobs:
           exclude-pr-closed-before: '2022-03-27T00:00:00Z'
           exclude-pr-closed-after: '2022-03-30T15:00:00Z'
           exclude-pr-closed-between: ''
-          include-any-pr-labels: ''
+          include-any-pr-labels: 'GIIT'
           include-all-pr-labels: ''
           exclude-any-pr-labels: ''
           add-pr-labels: 'locked PR'
