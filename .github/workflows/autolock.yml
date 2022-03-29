@@ -50,6 +50,6 @@ jobs:
           exclude-any-pr-labels: ''
           add-pr-labels: 'locked PR'
           remove-pr-labels: ''
-          pr-comment: 'prs'
+          pr-comment: 'this PR is closed so locking it'
           pr-lock-reason: 'resolved'
           log-output: true
