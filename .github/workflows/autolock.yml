@@ -51,5 +51,5 @@ jobs:
           add-pr-labels: 'locked PR'
           remove-pr-labels: ''
           pr-comment: 'prs'
-          pr-lock-reason: 'resolved PR'
+          pr-lock-reason: 'resolved'
           log-output: true
