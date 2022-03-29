@@ -1,0 +1,37 @@
+name: 'auto lock Bot '
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: lock
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dessant/lock-threads@v3
+        with:
+          
+          github-token: ${{ github.token }}
+          pr-inactive-days: '0'
+          exclude-pr-created-before: ''
+          exclude-pr-created-after: ''
+          exclude-pr-created-between: ''
+          exclude-pr-closed-before: '2022-03-27T00:00:00Z'
+          exclude-pr-closed-after: '2022-03-30T15:00:00Z'
+          exclude-pr-closed-between: ''
+          include-any-pr-labels: ''
+          include-all-pr-labels: ''
+          exclude-any-pr-labels: ''
+          add-pr-labels: 'locked PR'
+          remove-pr-labels: ''
+          pr-comment: 'this PR is closed so locking it'
+          pr-lock-reason: 'resolved'
+          log-output: true
