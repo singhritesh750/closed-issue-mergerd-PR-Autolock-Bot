@@ -1,4 +1,4 @@
-name: 'auto lock Bot '
+name: 'auto lock Bot for PR '
 
 on:
   schedule:
