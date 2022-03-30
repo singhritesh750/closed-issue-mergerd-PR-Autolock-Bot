@@ -1,8 +1,8 @@
-name: 'auto lock Bot for PR '
+name: 'Autolock RitBot for for PR'
 
 on:
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -20,18 +20,18 @@ jobs:
         with:
           
           github-token: ${{ github.token }}
-          pr-inactive-days: '0'
+          pr-inactive-days: '14'
           exclude-pr-created-before: ''
           exclude-pr-created-after: ''
           exclude-pr-created-between: ''
           exclude-pr-closed-before: ''
           exclude-pr-closed-after: ''
           exclude-pr-closed-between: ''
-          include-any-pr-labels: 'GIIT'
+          include-any-pr-labels: 'automerge'
           include-all-pr-labels: ''
           exclude-any-pr-labels: ''
           add-pr-labels: 'locked PR'
           remove-pr-labels: ''
-          pr-comment: 'this PR is closed so locking it'
+          pr-comment: 'This PR has been automatically locked since there has not been any activity in past 14 days after it was merged.'
           pr-lock-reason: 'resolved'
           log-output: true
