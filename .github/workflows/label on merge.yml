@@ -6,7 +6,7 @@ on:
 
 jobs:
   label_pr_job:
-    if: github.event.pull_request.merged == true
+#     if: github.event.pull_request.merged == true
     permissions:
       contents: read
       pull-requests: write
